@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real & Proper Investments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #d71016;
+            --primary-dark: #b20e13;
+            --primary-light: #f8d7da;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary-color);
+        }
+        
+        .text-primary {
+            color: var(--primary-color);
+        }
+        
+        .border-primary {
+            border-color: var(--primary-color);
+        }
+        
+        .hover\:bg-primary-dark:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .modal {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(-20px);
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .modal.active {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .dropdown-menu {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                position: static;
+                display: none;
+                opacity: 1;
+                transform: none;
+            }
+            
+            .mobile-menu {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            
+            .mobile-menu.active {
+                max-height: 1000px;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-primary">Real & Proper T | Invest</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100">Home</a>
+                    
+                    <div class="dropdown relative">
+                        <button class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 flex items-center">
+                            About Us <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Company Overview</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Leadership Team</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Philosophy</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Regulatory Information</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 flex items-center">
+                            Investment Channels <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Real and Proper Properties</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Real and Proper Token Estates</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Traditional Investments</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 flex items-center">
+                            Client Portal <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dashboard</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Transaction History</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Document Center</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Investment Tools</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 flex items-center">
+                            Insights <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Blog/News</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Market Reports</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Webinars/Events</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Educational Content</a>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100">Contact</a>
+                    
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100">Legal</a>
+                    
+                    <button onclick="openModal('loginModal')" class="ml-4 px-4 py-2 bg-primary text-white text-sm font-medium rounded-md hover:bg-primary-dark transition duration-300">
+                        Login
+                    </button>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu md:hidden bg-white container mx-auto px-4">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Home</a>
+                
+                <div>
+                    <button onclick="toggleSubMenu('aboutMobile')" class="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">
+                        About Us <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="aboutMobile" class="pl-4 hidden">
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Company Overview</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Leadership Team</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Our Philosophy</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Regulatory Information</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <button onclick="toggleSubMenu('investMobile')" class="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">
+                        Investment Channels <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="investMobile" class="pl-4 hidden">
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Real and Proper Properties</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Real and Proper Token Estates</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Traditional Investments</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <button onclick="toggleSubMenu('clientMobile')" class="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">
+                        Client Portal <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="clientMobile" class="pl-4 hidden">
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Dashboard</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Transaction History</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Document Center</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Investment Tools</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <button onclick="toggleSubMenu('insightsMobile')" class="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">
+                        Insights <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="insightsMobile" class="pl-4 hidden">
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Blog/News</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Market Reports</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Webinars/Events</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Educational Content</a>
+                    </div>
+                </div>
+                
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Contact</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Legal</a>
+                
+                <button onclick="openModal('loginModal')" class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-white bg-primary hover:bg-primary-dark">
+                    Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+   <!-- Full-height Hero Section -->
+<section class="relative bg-gray-900 text-white h-screen max-h-[800px]">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-black opacity-50 z-0">
+        <img src="rt_invest.jpg" alt="Investment Background" class="w-full h-full object-cover">
+    </div>
+    
+    <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+        <div class="flex flex-col md:flex-row items-center w-full">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Innovative Investment Solutions</h1>
+                <p class="text-xl lg:text-2xl mb-8 text-gray-300">Maximize your returns with our cutting-edge real estate and traditional investment platforms.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button onclick="openModal('demoModal')" class="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition duration-300">
+                        Request Demo
+                    </button>
+                    <button onclick="openModal('contactModal')" class="px-8 py-3 bg-transparent border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-gray-900 transition duration-300">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <!-- Optional content on the right side -->
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Investment Channels</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-primary bg-opacity-10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-home text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Real and Proper Properties</h3>
+                    <p class="text-gray-600 mb-4">Invest in premium physical real estate properties with high growth potential and stable rental income.</p>
+                    <button onclick="openModal('propertiesModal')" class="text-primary font-medium flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </button>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-primary bg-opacity-10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-coins text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Real and Proper Token Estates</h3>
+                    <p class="text-gray-600 mb-4">Fractional ownership through blockchain technology, making real estate investment accessible to all.</p>
+                    <button onclick="openModal('tokenModal')" class="text-primary font-medium flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </button>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-primary bg-opacity-10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Traditional Investments</h3>
+                    <p class="text-gray-600 mb-4">Diversify with our expertly managed portfolios of stocks, bonds, and other traditional assets.</p>
+                    <button onclick="openModal('traditionalModal')" class="text-primary font-medium flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-primary mb-2">$2.4B+</div>
+                    <div class="text-gray-600">Assets Under Management</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-primary mb-2">15K+</div>
+                    <div class="text-gray-600">Investors Worldwide</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-primary mb-2">24</div>
+                    <div class="text-gray-600">Countries with Properties</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-primary mb-2">98%</div>
+                    <div class="text-gray-600">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The tokenized real estate platform has allowed me to diversify my portfolio like never before. The returns have been consistently strong."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">Investor since 2019</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The team's market insights and property selection have outperformed all my other investments. Highly recommended for serious investors."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Michael Chen</h4>
+                            <p class="text-gray-500 text-sm">Investor since 2017</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"As someone new to real estate investing, the educational resources and responsive support team made all the difference for me."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Emily Rodriguez</h4>
+                            <p class="text-gray-500 text-sm">Investor since 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button onclick="openModal('testimonialsModal')" class="px-6 py-2 border border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition duration-300">
+                    View More Testimonials
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Start Investing?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of investors who are building wealth through our innovative platforms.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button onclick="openModal('signupModal')" class="px-8 py-3 bg-white text-primary font-medium rounded-lg hover:bg-gray-100 transition duration-300">
+                    Sign Up Now
+                </button>
+                <button onclick="openModal('contactModal')" class="px-8 py-3 bg-transparent border-2 border-white font-medium rounded-lg hover:bg-white hover:text-primary transition duration-300">
+                    Schedule Consultation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Real & Proper</h3>
+                    <p class="text-gray-400 mb-4">Innovative investment solutions for the modern investor.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Investment Channels</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Client Portal</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Risk Disclosures</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Use</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Regulatory Information</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 Investment Ave, Financial District, NY 10005</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@realandproper.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Real & Proper Investments. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Security</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Accessibility</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Client Login</h3>
+                    <button onclick="closeModal('loginModal')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <form>
+                    <div class="mb-4">
+                        <label for="loginEmail" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                        <input type="email" id="loginEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="loginPassword" class="block text-gray-700 font-medium mb-2">Password</label>
+                        <input type="password" id="loginPassword" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="••••••••">
+                        <div class="text-right mt-2">
+                            <a href="#" class="text-sm text-primary hover:underline">Forgot password?</a>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-primary text-white py-3 px-4 rounded-lg font-medium hover:bg-primary-dark transition duration-300 mb-4">
+                        Sign In
+                    </button>
+                    
+                    <div class="text-center text-gray-600">
+                        Don't have an account? <a href="#" onclick="closeModal('loginModal'); openModal('signupModal')" class="text-primary hover:underline">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Create Account</h3>
+                    <button onclick="closeModal('signupModal')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <form>
+                    <div class="mb-4">
+                        <label for="signupName" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                        <input type="text" id="signupName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Doe">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="signupEmail" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                        <input type="email" id="signupEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="signupPassword" class="block text-gray-700 font-medium mb-2">Password</label>
+                        <input type="password" id="signupPassword" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="••••••••">
+                        <p class="text-xs text-gray-500 mt-1">Minimum 8 characters with at least one number</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="signupConfirm" class="block text-gray-700 font-medium mb-2">Confirm Password</label>
+                        <input type="password" id="signupConfirm" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="••••••••">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox h-4 w-4 text-primary rounded focus:ring-primary border-gray-300">
+                            <span class="ml-2 text-gray-700 text-sm">I agree to the <a href="#" class="text-primary hover:underline">Terms of Service</a> and <a href="#" class="text-primary hover:underline">Privacy Policy</a></span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-primary text-white py-3 px-4 rounded-lg font-medium hover:bg-primary-dark transition duration-300 mb-4">
+                        Create Account
+                    </button>
+                    
+                    <div class="text-center text-gray-600">
+                        Already have an account? <a href="#" onclick="closeModal('signupModal'); openModal('loginModal')" class="text-primary hover:underline">Sign in</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Contact Our Team</h3>
+                    <button onclick="closeModal('contactModal')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">Get in Touch</h4>
+                        <form>
+                            <div class="mb-4">
+                                <label for="contactName" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="contactName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contactEmail" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="contactEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contactPhone" class="block text-gray-700 font-medium mb-2">Phone Number (Optional)</label>
+                                <input type="tel" id="contactPhone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contactSubject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                <select id="contactSubject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option value="">Select a topic</option>
+                                    <option value="investment">Investment Inquiry</option>
+                                    <option value="account">Account Support</option>
+                                    <option value="partnership">Partnership Opportunities</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contactMessage" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="contactMessage" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary text-white py-3 px-4 rounded-lg font-medium hover:bg-primary-dark transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">Contact Information</h4>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="flex items-start mb-6">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-gray-800">Headquarters</h5>
+                                    <p class="text-gray-600">123 Investment Ave<br>Financial District<br>New York, NY 10005</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start mb-6">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-gray-800">Phone</h5>
+                                    <p class="text-gray-600">+1 (555) 123-4567<br>Mon-Fri, 9am-5pm EST</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-gray-800">Email</h5>
+                                    <p class="text-gray-600">info@realandproper.com<br>support@realandproper.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Demo Modal -->
+    <div id="demoModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Request a Demo</h3>
+                    <button onclick="closeModal('demoModal')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <p class="text-gray-600 mb-6">Fill out the form below and one of our investment specialists will contact you to schedule a personalized demo of our platform.</p>
+                
+                <form>
+                    <div class="mb-4">
+                        <label for="demoName" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                        <input type="text" id="demoName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Doe">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="demoEmail" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                        <input type="email" id="demoEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="demoCompany" class="block text-gray-700 font-medium mb-2">Company (Optional)</label>
+                        <input type="text" id="demoCompany" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Company Name">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="demoPhone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                        <input type="tel" id="demoPhone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="+1 (555) 123-4567">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="demoInterest" class="block text-gray-700 font-medium mb-2">Primary Interest</label>
+                        <select id="demoInterest" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <option value="">Select an option</option>
+                            <option value="properties">Real and Proper Properties</option>
+                            <option value="token">Token Estates</option>
+                            <option value="traditional">Traditional Investments</option>
+                            <option value="all">All Investment Channels</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-primary text-white py-3 px-4 rounded-lg font-medium hover:bg-primary-dark transition duration-300">
+                        Request Demo
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Investment Channel Modals -->
+    
+    <!-- Properties Modal -->
+    <div id="propertiesModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-xl max-w-3xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Real and Proper Properties</h3>
+                    <button onclick="closeModal('propertiesModal')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Real Estate Properties" class="rounded-lg mb-4">
+                        <div class="bg-primary bg-opacity-10 p-4 rounded-lg">
+                            <h4 class="font-semibold text-primary mb-2">Key Benefits</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Tangible asset ownership</li>
+                                <li>Stable rental income streams</li>
+                                <li>Potential for capital appreciation</li>
+                                <li>Diversification across property types</li>
+                                <li>Professional property management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <p class="text-gray-600 mb-4">Our Real and Proper Properties platform offers access to premium physical real estate investments across residential, commercial, and mixed-use properties in high-growth markets worldwide.</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-800 mb-2">Investment Highlights</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Curated selection of properties with strong fundamentals</li>
+                                <li>Thorough due diligence and vetting process</li>
+                                <li>Transparent reporting and performance tracking</li>
+                                <li>Flexible investment amounts to suit your portfolio</li>
+                                <li>Tax-advantaged structures available</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-gray-800 mb-2">Performance Snapshot</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-primary">8.2%</div>
+                                    <div class="text-sm text-gray-600">Avg. Annual Return</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-primary">94%</div>
+                                    <div class="text-sm text-gray-600">Occupancy Rate</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-primary">$450M</div>
+                                    <div class="text-sm text-gray-600">Total Assets</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-primary">24</div>
+                                    <div class="text-sm text-gray-600">Properties</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button onclick="closeModal('propertiesModal'); openModal('contactModal')" class="w-full bg-primary text-white py-3 px-4 rounded-lg font-medium hover:bg-primary-dark transition duration-300">
+                            Contact Our Properties Team
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Token Modal -->
+    <div id="tokenModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-xl max-w-3xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Real and Proper Token Estates</h3>
+                    <button onclick="closeModal('tokenModal')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Tokenized Real Estate" class="rounded-lg mb-4">
+                        <div class="bg-primary bg-opacity-10 p-4 rounded-lg">
+                            <h4 class="font-semibold text-primary mb-2">Key Benefits</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Fractional ownership of premium properties</li>
+                                <li>Lower minimum investment thresholds</li>
+                                <li>Enhanced liquidity options</li>
+                                <li>Blockchain-enabled transparency</li>
+                                <li>Global property access</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <p class="text-gray-600 mb-4">Our Token Estates platform leverages blockchain technology to democratize access to high-quality real estate investments through fractional ownership tokens, combining the stability of real estate with the innovation of digital assets.</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-800 mb-2">Platform Features</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Tokenized shares of income-producing properties</li>
+                                <li>Secondary market trading capabilities</li>
+                                <li>Automated dividend distributions</li>
+                                <li>Regulatory-compliant security tokens</li>
+                                <li>24/7 portfolio monitoring</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-gray-800 mb-2">Performance Snapshot</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-primary">12.5%</div>
+                                    <div class="text-sm text-gray-600">Avg. Annual Return</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-primary">$180M</div>
+                                    <div class="text-sm text-gray-600">Total Value Tokenized</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-primary">7,500+</div>
+                                    <div class="text-sm text-gray-600">Token Holders</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-primary">18</div>
+                                    <div class="text-sm text-gray-600">Tokenized Properties</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button onclick="closeModal('tokenModal'); openModal('contactModal')" class="w-full bg-primary text-white py-3 px-4 rounded-lg font-medium hover:bg-primary-dark transition duration-300">
+                            Learn About Token Investing
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Traditional Modal -->
+    <div id="traditionalModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-xl max-w-3xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Traditional Investments</h3>
+                    <button onclick="closeModal('traditionalModal')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1468254095679-bbcba94a7066?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Traditional Investments" class="rounded-lg mb-4">
+                        <div class="bg-primary bg-opacity-10 p-4 rounded-lg">
+                            <h4 class="font-semibold text-primary mb-2">Key Benefits</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Diversified portfolio strategies</li>
+                                <li>Professional asset management</li>
+                                <li>Risk-adjusted return focus</li>
+                                <li>Liquidity and flexibility</li>
+                                <li>Tax-efficient structures</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <p class="text-gray-600 mb-4">Our Traditional Investments platform offers expertly managed portfolios across stocks, bonds, ETFs, and other conventional asset classes, designed to complement your real estate holdings with a balanced approach to wealth building.</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-800 mb-2">Investment Options</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Equity portfolios (US and International)</li>
+                                <li>Fixed income strategies</li>
+                                <li>Balanced and target-date funds</li>
+                                <li>Sector-specific thematic investing</li>
+                                <li>Alternative investment access</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-semibold text-gray-800 mb-2">Performance Snapshot</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-primary">9.8%</div>
+                                    <div class="text-sm text-gray-600">Avg. Annual Return (Growth Portfolio)</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-primary">5.2%</div>
+                                    <div class="text-sm text-gray-600">Avg. Annual Return (Income Portfolio)</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-primary">$1.2B</div>
+                                    <div class="text-sm text-gray-600">Assets Under Management</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-primary">15+</div>
+                                    <div class="text-sm text-gray-600">Investment Strategies</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button onclick="closeModal('traditionalModal'); openModal('contactModal')" class="w-full bg-primary text-white py-3 px-4 rounded-lg font-medium hover:bg-primary-dark transition duration-300">
+                            Speak with an Investment Advisor
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Testimonials Modal -->
+    <div id="testimonialsModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Client Testimonials</h3>
+                    <button onclick="closeModal('testimonialsModal')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">"After years of struggling to find reliable real estate investments, Real & Proper's platform has been a game-changer. The due diligence they perform on each property gives me confidence in every investment."</p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Robert Taylor" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold">Robert Taylor</h4>
+                                <p class="text-gray-500 text-sm">Investor since 2018</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">"The tokenized real estate platform allowed me to invest in properties I could never afford outright. The quarterly distributions have been reliable and the app makes tracking everything so simple."</p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Jennifer Lee" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold">Jennifer Lee</h4>
+                                <p class="text-gray-500 text-sm">Investor since 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">"As a financial advisor, I recommend Real & Proper to my clients looking for alternative investments. Their reporting is transparent and their client service team is exceptionally responsive."</p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="David Wilson" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold">David Wilson</h4>
+                                <p class="text-gray-500 text-sm">Financial Advisor</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">"I've been able to build a diversified real estate portfolio across multiple countries without the headaches of direct ownership. The combination of physical properties and tokenized assets is perfect."</p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/89.jpg" alt="Amanda Chen" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold">Amanda Chen</h4>
+                                <p class="text-gray-500 text-sm">Investor since 2019</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <button onclick="closeModal('testimonialsModal'); openModal('contactModal')" class="px-6 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition duration-300">
+                        Join Our Satisfied Clients
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        // Mobile submenu toggle
+        function toggleSubMenu(id) {
+            const submenu = document.getElementById(id);
+            submenu.classList.toggle('hidden');
+        }
+        
+        // Modal functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Close dropdown when clicking outside (for mobile)
+        document.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropdown button') && !event.target.closest('.dropdown')) {
+                const dropdowns = document.querySelectorAll('.dropdown-menu');
+                dropdowns.forEach(dropdown => {
+                    dropdown.style.display = 'none';
+                    dropdown.style.opacity = '0';
+                    dropdown.style.transform = 'translateY(-10px)';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
